@@ -1,7 +1,6 @@
 
 //Recibe un objeto y lo devuelve en forma de componente con esta plantilla
 export const Item = ({ item }) => {
-    console.log(item)
     return (
         <div className="card" style={{width: '18rem'}}>
             <img src={`img/${item.imagen}`} className="card-img-top" alt={`Imagen de ${item.nombre}`} />

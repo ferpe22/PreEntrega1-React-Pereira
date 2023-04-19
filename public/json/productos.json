@@ -18,7 +18,7 @@
         "modelo": "XBOX One S",
         "descripcion": "Con 3 juegos, un control, y Kinect",
         "precio": 125000,
-        "stock": 1,
+        "stock": 2,
         "imagen": "xbox.jpg"
     },
     {
@@ -29,7 +29,7 @@
         "modelo": "PO3700",
         "descripcion": "De aire caliente. Un solo uso.",
         "precio": 4000,
-        "stock": 1,
+        "stock": 8,
         "imagen": "pochoclera.jpg"
     },
     {
@@ -40,7 +40,7 @@
         "modelo": "",
         "descripcion": "Pack x3 hebilla intercambiable",
         "precio": 1000,
-        "stock": 1,
+        "stock": 6,
         "imagen": "cinturones.jpg"
     },
     {
@@ -51,7 +51,7 @@
         "modelo": "El Cinefilo",
         "descripcion": "Casi nuevo. Solo una jugada😱.",
         "precio": 4000,
-        "stock": 1,
+        "stock": 10,
         "imagen": "cinefilo.jpg"
     },
     {
@@ -62,7 +62,7 @@
         "modelo": "14IN3245",
         "descripcion": "14in 4GB RAM 256GB SSD",
         "precio": 50000,
-        "stock": 1,
+        "stock": 2,
         "imagen": "notebook.jpg"
     },
     {
@@ -73,7 +73,7 @@
         "modelo": "Titanium 3000",
         "descripcion": "Buen estado. Encordado nuevo",
         "precio": 8000,
-        "stock": 1,
+        "stock": 3,
         "imagen": "raqueta.jpg"
     },
     {
@@ -84,7 +84,7 @@
         "modelo": "Reactive",
         "descripcion": "Buen estado. Con detalles de uso",
         "precio": 10000,
-        "stock": 1,
+        "stock": 4,
         "imagen": "paleta.jpg"
     },
     {
@@ -95,7 +95,7 @@
         "modelo": "Grande 75x45x30 cm",
         "descripcion": "Impecable. Un solo uso",
         "precio": 40000,
-        "stock": 1,
+        "stock": 7,
         "imagen": "valija.jpg"
     },
     {
@@ -106,7 +106,7 @@
         "modelo": "2 cuerpos",
         "descripcion": "Almohadones renovados",
         "precio": 12000,
-        "stock": 1,
+        "stock": 5,
         "imagen": "sillon.jpg"
     },
     {
@@ -128,7 +128,7 @@
         "modelo": "2 modulos",
         "descripcion": "Impecable estado",
         "precio": 16000,
-        "stock": 1,
+        "stock": 2,
         "imagen": "biblioteca.jpg"
     }
 ]
