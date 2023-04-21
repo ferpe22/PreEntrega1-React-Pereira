@@ -1,32 +1,45 @@
-import React from "react";
+import { Link } from "react-router-dom";
+
 export const Categorias = () => {
 
     return (
         
         <ul className="navbar-nav me-auto">
             <li className="nav-item">
-                <a className="nav-link active" href="#">Hogar
-                <span className="visually-hidden">(current)</span>
-                </a>
+                <Link className="nav-link active" to={"/category/1"}>
+                    <button className="btn btn-secondary">
+                        <i className="fas fa-home fa-lg"></i> Hogar
+                    </button> 
+                {/* <span className="visually-hidden">(current)</span> */}
+                </Link>
             </li>
             <li className="nav-item">
-                <a className="nav-link active" href="#">Indumentaria</a>
+                <Link className="nav-link active" to={"/category/2"}>
+                    <button className="btn btn-secondary">
+                        <i className="fas fa-tshirt fa-lg"></i> Indumentaria
+                    </button>
+                </Link>
             </li>
             <li className="nav-item">
-                <a className="nav-link active" href="#">Deportes</a>
+                <Link className="nav-link active" to={"/category/3"}>
+                    <button className="btn btn-secondary">
+                        <i className="fas fa-running fa-lg"></i> Deportes
+                    </button>
+                </Link>
             </li>
             <li className="nav-item">
-                <a className="nav-link active" href="#">Tecnologia</a>
+                <Link className="nav-link active" to={"/category/4"}>
+                    <button className="btn btn-secondary">
+                        <i className="fas fa-laptop fa-lg"></i> Tecnologia
+                    </button> 
+                </Link>
             </li>
-            <li className="nav-item dropdown">
-                <a className="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Ordenar</a>
-                <div className="dropdown-menu">
-                    <a className="dropdown-item" href="#">Action</a>
-                    <a className="dropdown-item" href="#">Another action</a>
-                    <a className="dropdown-item" href="#">Something else here</a>
-                    <div className="dropdown-divider" />
-                        <a className="dropdown-item" href="#">Separated link</a>
-                    </div>
+            <li className="nav-item">
+                <Link className="nav-link active" to={"/category/5"}>
+                    <button className="btn btn-secondary">
+                        <i className="fas fa-tv fa-lg"></i> Electro
+                    </button>
+                </Link>
             </li>
         </ul>
     );
