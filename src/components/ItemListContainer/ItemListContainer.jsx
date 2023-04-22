@@ -31,7 +31,7 @@ export const ItemListContainer = () => {
             fetch('../json/productos.json')
                 .then(response => response.json())
                 .then(productos => {
-                    const productosFiltrados = productos.filter(prod => prod.stock > 0).filter(prod => prod.idCategoria === parseInt(category)) 
+                    const productosFiltrados = productos.filter(prod => prod.stock > 0).filter(prod => prod.idCategoria === category) 
                     setProductos(productosFiltrados)
             })
         } else {

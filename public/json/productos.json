@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "idCategoria": 3,
+        "idCategoria": "deportes",
         "nombre": "Caminadora",
         "marca": "Randers",
         "modelo": "ARG490",
@@ -12,7 +12,7 @@
     },
     {
         "id": 2,
-        "idCategoria": 4,
+        "idCategoria": "tecnologia",
         "nombre": "Consola",
         "marca": "Microsoft",
         "modelo": "XBOX One S",
@@ -23,7 +23,7 @@
     },
     {
         "id": 3,
-        "idCategoria": 5,
+        "idCategoria": "electro",
         "nombre": "Pochoclera",
         "marca": "Yelmo",
         "modelo": "PO3700",
@@ -34,7 +34,7 @@
     },
     {
         "id": 4,
-        "idCategoria": 2,
+        "idCategoria": "indumentaria",
         "nombre": "Cinturones",
         "marca": "Nike",
         "modelo": "",
@@ -45,7 +45,7 @@
     },
     {
         "id": 5,
-        "idCategoria": 1,
+        "idCategoria": "hogar",
         "nombre": "Juego Mesa",
         "marca": "Maldon",
         "modelo": "El Cinefilo",
@@ -56,7 +56,7 @@
     },
     {
         "id": 6,
-        "idCategoria": 4,
+        "idCategoria": "tecnologia",
         "nombre": "Notebook",
         "marca": "Compaq",
         "modelo": "14IN3245",
@@ -67,7 +67,7 @@
     },
     {
         "id": 7,
-        "idCategoria": 3,
+        "idCategoria": "deportes",
         "nombre": "Raqueta",
         "marca": "Head",
         "modelo": "Titanium 3000",
@@ -78,7 +78,7 @@
     },
     {
         "id": 8,
-        "idCategoria": 3,
+        "idCategoria": "deportes",
         "nombre": "Paleta",
         "marca": "Marcraft",
         "modelo": "Reactive",
@@ -89,7 +89,7 @@
     },
     {
         "id": 9,
-        "idCategoria": 1,
+        "idCategoria": "hogar",
         "nombre": "Valija",
         "marca": "75x45x30 cm",
         "modelo": "Grande",
@@ -100,7 +100,7 @@
     },
     {
         "id": 10,
-        "idCategoria": 1,
+        "idCategoria": "hogar",
         "nombre": "Sillon",
         "marca": "",
         "modelo": "2 cuerpos",
@@ -111,7 +111,7 @@
     },
     {
         "id": 11,
-        "idCategoria": 1,
+        "idCategoria": "hogar",
         "nombre": "Mesa + sillas",
         "marca": "Incluye 4 sillas",
         "modelo": "Escandinavo",
@@ -122,7 +122,7 @@
     },
     {
         "id": 12,
-        "idCategoria": 1,
+        "idCategoria": "hogar",
         "nombre": "Biblioteca",
         "marca": "",
         "modelo": "2 modulos",
