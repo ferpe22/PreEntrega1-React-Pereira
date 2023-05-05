@@ -1,6 +1,6 @@
-import { useCount } from "../../hooks/useCount.js"
+import { useCount } from "../../hooks/useCount"
 
-export const ItemCount = ({ValInicial, min, max, onAdd}) => {
+export const ItemCount = ({ ValInicial, min, max, onAdd }) => {
     
     const {count, minus, sum, reset} = useCount(ValInicial, min, max)
 

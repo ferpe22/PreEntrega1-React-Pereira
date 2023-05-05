@@ -25,6 +25,10 @@
     margin-top: 10px;
 }
 
+.cardCart {
+    max-width: 640px;
+}
+
 .divForm {
     margin-top: 20px;
 }

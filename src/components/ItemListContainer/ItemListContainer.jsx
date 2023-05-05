@@ -52,7 +52,7 @@ export const ItemListContainer = () => {
     return (
         <div className="container">
             <div className="row g-4 justify-content-between">
-                {<ItemList productos={productos} />}
+                {<ItemList productos={productos} plantilla={"Item"} />}
             </div>
         </div>
 

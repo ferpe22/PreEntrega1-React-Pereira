@@ -1,10 +1,17 @@
-
 //Recibe un array de productos y a cada uno de ellos los tranformara en componenentes dada una plantilla (Item)
 import { Item } from "../Item/Item"
-export const ItemList = ({ productos }) => {
+import { ItemCart } from "../ItemCart/ItemCart"
+
+export const ItemList = ({ productos, plantilla }) => {
     return (
         <>
-            {productos.map(producto => <Item key={producto.id} item={producto}/>)}
+            {
+                plantilla === "Item"
+                    ?
+                    productos.map(producto => <Item key={producto.id} item={producto}/>)
+                    :
+                    productos.map(producto => <ItemCart key={producto.id} item={producto}/>)
+            }
         </>
     )
 }

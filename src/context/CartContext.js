@@ -34,7 +34,7 @@ export const CarritoProvider = (props) => {
             // setCarrito(aux)
 
             //opcion2: genero una copia del carrito con el operador spread y agrego el nuevo producto
-            setCarrito(...carrito, newItem)
+            setCarrito([...carrito, newItem])
         }
     }
     
@@ -48,21 +48,21 @@ export const CarritoProvider = (props) => {
         setCarrito(carrito.filter(prod => prod.id !== id))
     }
 
-    const emptyCart = () => {
+    const clearCart = () => {
         setCarrito([])
     }
 
     const getItemQuantity = () => {
-        return carrito.reduce((acum, prod) => acum += prod.cant, 0)
+        return carrito.reduce((acum, prod) => acum += prod.quantity, 0)
     }
     
     const totalPrice = () => {
-        return carrito.reduce((acum, prod) => acum += (prod.quantity * prod.precio))
+        return carrito.reduce((acum, prod) => acum += (prod.quantity * prod.precio), 0)
     }
 
     console.log(carrito)
     return (
-        <CarritoContext.Provider value={{carrito, addItem, removeItem, emptyCart, getItemQuantity, totalPrice }}>
+        <CarritoContext.Provider value={{carrito, addItem, removeItem, clearCart, getItemQuantity, totalPrice }}>
             {props.children}
         </CarritoContext.Provider>
     )
