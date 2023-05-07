@@ -10,7 +10,7 @@ export const ItemDetail = ({ item }) => {
     return (
         <div className="row g-0 align-items-center">
             <div className="col-md-4">
-                <img src={`/img/${item.imagen}`} alt={`Imagen de ${item.nombre}`} className="img-fluid rounded-start" />
+                <img src={item.imagen} alt={`Imagen de ${item.nombre}`} className="img-fluid rounded-start" />
             </div>
             <div className="col-md-8">
                 <div className="card-body">

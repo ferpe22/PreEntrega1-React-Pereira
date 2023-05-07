@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { ItemDetail } from "../ItemDetail/ItemDetail"
 import { useParams } from "react-router-dom"
+import { getProducto } from "../../firebase/firebase"
 
 export const ItemDetailContainer = () => {
     
@@ -8,12 +9,7 @@ export const ItemDetailContainer = () => {
     const { id } = useParams()
 
     useEffect(() => {
-        fetch('../json/productos.json') //.. por estar en una ruta adicional a la que ya tenia
-            .then(response => response.json())
-            .then(productos => {
-                const prod = productos.find(prod => prod.id === parseInt(id))
-                setItem(prod)
-            })
+        getProducto(id).then(prod => setItem(prod))
     }, [])
     
     return (

@@ -1,4 +1,5 @@
 import './App.css';
+
 //Router
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -12,11 +13,12 @@ import { ItemListContainer } from './components/ItemListContainer/ItemListContai
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
 import { Checkout } from './components/Checkout/Checkout';
 
-import { createProducts } from './firebase/firebase';
+import { createProductsDB, getProductsDB } from './firebase/firebase';
 import { Cart } from './components/Cart/Cart';
 
 export const App = () => {
-  createProducts()
+  //createProductsDB()
+  getProductsDB()
   return (
       <>
         < BrowserRouter>

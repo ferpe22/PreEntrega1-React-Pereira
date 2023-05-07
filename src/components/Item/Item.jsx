@@ -4,7 +4,7 @@ import { Link } from "react-router-dom" // Funcion que permite navegar por la ap
 export const Item = ({ item }) => {
     return (
         <div className="card" style={{width: '18rem'}}>
-            <img src={`/img/${item.imagen}`} className="card-img-top" alt={`Imagen de ${item.nombre}`} />
+            <img src={item.imagen} className="card-img-top" alt={`Imagen de ${item.nombre}`} />
             <div className="card-body">
                 <h5 className="card-title">{item.nombre} {item.modelo}</h5>
                 <p className="card-text">Marca: {item.marca}</p>

@@ -1,18 +1,51 @@
 import { useRef } from "react"
 import { useCarritoContext } from "../../context/CartContext"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
+import { crearOrdenCompra, getProducto, updateProducto } from "../../firebase/firebase"
+import Swal from "sweetalert2"
 
 export const Checkout = () => {
     
     const datForm = useRef ()
     const { carrito, clearCart, totalPrice } = useCarritoContext()
     
+    let navigate = useNavigate() //devuelve la localizacion actual
     const consultarForm = (e) => {
         e.preventDefault()
         const datosFormulario = new FormData(datForm.current) //Pasar de un html a un objeto iterable
         const cliente = Object.fromEntries(datosFormulario) //Pasar de un objeto iterable a un objeto simple
         console.log(cliente)
-        e.target.reset() //para resetear el formulario una vez presiono submit
+        const aux = [...carrito]
+        //recorrer carrito y descontar stock
+        aux.forEach(prodCarrito => {
+            getProducto(prodCarrito.id).then(productoDB => {
+                if(productoDB.stock >= prodCarrito.quantity) { //si el stock de mi prod en la base datos es mayor o igual a la cantidad que el cliente quiere comprar, descuento de stock
+                    productoDB.stock -= prodCarrito.quantity
+                    updateProducto(productoDB.id, productoDB) //envio a la base datos el producto descontando su stock
+                } else {
+                    console.log("El stock no es mayor o igual a la cantidad que se requiere comprar")
+                }
+            })
+        })
+        const aux2 = aux.map(prod => ({id: prod.id, quantity: prod.quantity, precio: prod.precio}));
+        
+        crearOrdenCompra(cliente, totalPrice(), aux2, new Date().toLocaleString('es-AR', {timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone}))
+            .then(ordenCompra => {
+                console.log(`Muchas gracias por su compra!! Su codigo de compra es ${ordenCompra.id} por un total de ${totalPrice()}`)
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: `Muchas gracias por su compra!! Su codigo de compra es ${ordenCompra.id} por un total de $${totalPrice()}`,
+                    showConfirmButton: false,
+                    timer: 3500
+                });
+                clearCart()
+                e.target.reset() //para resetear el formulario una vez presiono submit
+                navigate("/") //defino la ruta donde quiero redirigir
+            })
+            .catch(error => {
+                console.log(error)
+            })
     }
 
     return (
