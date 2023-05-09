@@ -29,7 +29,7 @@ export const Checkout = () => {
         })
         const aux2 = aux.map(prod => ({id: prod.id, quantity: prod.quantity, precio: prod.precio}));
         
-        crearOrdenCompra(cliente, totalPrice(), aux2, new Date().toLocaleString('es-AR', {timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone}))
+        crearOrdenCompra(cliente, aux2, totalPrice(), new Date().toLocaleString('es-AR', {timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone}))
             .then(ordenCompra => {
                 console.log(`Muchas gracias por su compra!! Su codigo de compra es ${ordenCompra.id} por un total de ${totalPrice()}`)
                 Swal.fire({
