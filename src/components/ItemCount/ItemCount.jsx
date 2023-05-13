@@ -6,11 +6,11 @@ export const ItemCount = ({ ValInicial, min, max, onAdd }) => {
 
     return (
         <>
-            <button className="btn btn-dark" onClick={minus}>-</button>
+            <button className="btn btn-dark buttons" onClick={minus}>-</button>
                 {count}
-            <button className="btn btn-dark" onClick={sum}>+</button>
-            <button className="btn btn-dark" onClick={reset}>Reset</button>
-            <button className="btn btn-light" onClick={() => onAdd(count)}>Agregar al Carrito</button>
+            <button className="btn btn-dark buttons" onClick={sum}>+</button>
+            <button className="btn btn-dark buttons" onClick={reset}>Reset</button>
+            <button className="btn btn-primary buttons" onClick={() => onAdd(count)}>Agregar al Carrito</button>
         </>
     )
 }

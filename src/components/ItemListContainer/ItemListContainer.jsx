@@ -48,7 +48,7 @@ export const ItemListContainer = () => {
     }, [category])
 
     return (
-        <div className="container">
+        <div className="container p-4">
             <div className="row g-4 justify-content-between">
                 {<ItemList productos={productos} plantilla={"Item"} />}
             </div>

@@ -9,12 +9,11 @@ import { DarkModeProvider } from './context/DarkModeContext';
 //Componentes
 import { Navbar } from './components/Navbar/Navbar';
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
-// import { Clima } from './components/Clima/Clima';
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
 import { Checkout } from './components/Checkout/Checkout';
-
 import { createProductsDB, getProductsDB } from './firebase/firebase';
 import { Cart } from './components/Cart/Cart';
+
 
 export const App = () => {
   //createProductsDB()
@@ -24,7 +23,6 @@ export const App = () => {
         < BrowserRouter>
           <DarkModeProvider>
             <Navbar />
-            {/* <Clima /> */}
             <Routes>
               <Route path='/' element={<ItemListContainer/>}/>
               <Route path='/category/:category' element={<ItemListContainer/>}/>

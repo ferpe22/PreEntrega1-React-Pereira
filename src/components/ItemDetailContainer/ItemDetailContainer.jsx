@@ -10,10 +10,11 @@ export const ItemDetailContainer = () => {
 
     useEffect(() => {
         getProducto(id).then(prod => setItem(prod))
+        .catch(error => console.error(error))
     }, [])
     
     return (
-        <div className="card md-3 container itemDetail">
+        <div className="card md-3 container m-3 itemDetail">
             <ItemDetail item={item} />
         </div>
     )

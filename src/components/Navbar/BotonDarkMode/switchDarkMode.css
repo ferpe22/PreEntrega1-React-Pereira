@@ -4,6 +4,7 @@
     display: inline-block;
     width: 3.5em;
     height: 2em;
+    padding: 10px;
 }
 
 .switch input {
