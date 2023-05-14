@@ -1,7 +1,7 @@
 import React from 'react';
 import { useCarritoContext } from '../../context/CartContext';
 
-
+//Plantilla (card) para mostrar los productos en el carrito.
 export const ItemCart = ({ item }) => {
     const { removeItem } = useCarritoContext()
     return (

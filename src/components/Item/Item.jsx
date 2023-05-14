@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom" // Funcion que permite navegar por la aplicacion, x ej mediante un evento
+import { Link } from "react-router-dom" // Funcion que permite navegar por la aplicacion, x ej. mediante un evento
 
 //Recibe un objeto y lo devuelve en forma de componente con esta plantilla
 export const Item = ({ item }) => {

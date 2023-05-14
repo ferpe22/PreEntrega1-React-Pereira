@@ -1,6 +1,7 @@
 import { ItemCount } from "../ItemCount/ItemCount"
 import { useCarritoContext } from "../../context/CartContext"
 
+//Plantilla (card) para ver el detalle del producto + componente contador
 export const ItemDetail = ({ item }) => {
     const { addItem } = useCarritoContext()
     const onAdd = (contador) => { //Agregar al carrito

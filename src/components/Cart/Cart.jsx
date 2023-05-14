@@ -2,7 +2,7 @@ import { useCarritoContext } from '../../context/CartContext';
 import { Link } from 'react-router-dom';
 import { ItemList } from '../ItemList/ItemList';
 
-
+//Consulto al carrito y evaluo si esta vacio o si tiene productos. En caso que tenga productos, los muestra conjuntamente con subtotales/totales.
 export const Cart = () => {
     const {carrito, totalPrice, clearCart} = useCarritoContext()
     return (
@@ -25,10 +25,7 @@ export const Cart = () => {
                             </div>
                         </div>
                     </div>
-                    
             }
-        
-        
         </>
     )
 }

@@ -1,10 +1,6 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getFirestore, addDoc, getDoc, getDocs, deleteDoc, updateDoc, collection, doc } from "firebase/firestore"
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
     apiKey: "AIzaSyAiKZ0saIj5PGsDQCbuR-nXG0bG4RKTjPY",
     authDomain: "vendemostodo-29717.firebaseapp.com",
@@ -19,14 +15,6 @@ const app = initializeApp(firebaseConfig);
 
 //Consultar BASE DE DATOS
 const dataBase = getFirestore()
-
-/*
-    "CRUD"
-    CREATE --> post
-    READ --> get
-    UPDATE --> put
-    DELETE --> delete
-*/
 
 //CRUD de los productos (asincronica)
 export const createProductsDB = async () => {

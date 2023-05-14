@@ -1,12 +1,12 @@
 import { useState, createContext, useContext } from "react";
 
-const DarkModeContext = createContext() //creo mi contexto
+const DarkModeContext = createContext()
 
-export const useDarkModeContext = () => useContext(DarkModeContext) // Creo una funcion para poder crear mi contexto
+export const useDarkModeContext = () => useContext(DarkModeContext)
 
-export const DarkModeProvider = (props) => { //Forma de proveer mi contexto dentro de mi app, puede recibir props si es necesario
+export const DarkModeProvider = (props) => {
 
-    const [darkMode, setDarkMode] = useState(false) //Defino el valor por default
+    const [darkMode, setDarkMode] = useState(false)
 
     //Funciones para modificar mi state
 

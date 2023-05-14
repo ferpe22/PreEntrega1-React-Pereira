@@ -20,7 +20,7 @@ export const Checkout = () => {
         //Object.fromEntries: se utiliza para pasar de un objeto iterable a un objeto simple
         const cliente = Object.fromEntries(datosFormulario)
         
-        //Validacion de igual de cada campo de email
+        //Validacion de igualdad de cada campo de email.
         if (cliente.email !== cliente.emailRepetido) {
             Swal.fire({
                 icon: 'error',
@@ -72,7 +72,7 @@ export const Checkout = () => {
             {
                 carrito.lenght === 0 ?
                 <>
-                    <h2>Debe tener productos en el carrito para poder finalizar la compra</h2>
+                    <h2>Debe tener productos en el carrito para poder finalizar la compra!</h2>
                     <Link className="nav-link" to={"/"}><button className="btn btn-primary">Continuar comprando</button></Link>
                 </>
                 :
@@ -95,11 +95,11 @@ export const Checkout = () => {
                             <input type="number" className="form-control" name="dni" required/>
                         </div>
                         <div className="mb-3">
-                            <label htmlFor="celular" className="form-label">Numero de Telefono</label>
+                            <label htmlFor="celular" className="form-label">Número de Teléfono</label>
                             <input type="number" className="form-control" name="celular" required/>
                         </div>
                         <div className="mb-3">
-                            <label htmlFor="direccion" className="form-label">Direccion</label>
+                            <label htmlFor="direccion" className="form-label">Dirección</label>
                             <input type="text" className="form-control" name="direccion" required/>
                         </div>
                         <button type="submit" className="btn btn-primary">Finalizar Compra</button>
