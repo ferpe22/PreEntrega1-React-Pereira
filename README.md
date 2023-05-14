@@ -63,6 +63,6 @@ Gracias!
 [GitHub]: https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white
 [in]: https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white
 
-[as]: https://ferpe22.github.io/ProyectoVendemosTodo-Pereira/
+[as]: https://vendemos-todo-react-pereira.vercel.app/
 [imgl]: https://imagesloaded.desandro.com
 [in-link]: https://www.linkedin.com/in/fernando-pereira-arias/
